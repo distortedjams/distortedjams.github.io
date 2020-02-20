@@ -1,0 +1,46 @@
+/* CSS Document */
+head{
+	
+}
+
+body{
+	background-color: white;
+	font: 15px arial, sans-serif;
+}
+
+h1{
+	color: navy;
+	margin-left: 20px;
+}
+
+p{
+	
+}
+
+.container{
+	width: 95%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 40% auto;
+	grid-template-rows: 75px;
+	
+}
+
+.column1{
+
+}
+
+.column2{
+
+}
+
+.column1 > div{
+	
+	padding-bottom: 20px;
+	font-size: 30px;
+}
+
+.column2 > div{
+	padding-bottom: 20px;
+	font-size: 30px;
+}
