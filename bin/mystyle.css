@@ -31,6 +31,7 @@ nav {
 section {
     min-height: 100vh;
     display: flex;
+	flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -115,12 +116,25 @@ section h2 {
     background: linear-gradient(to right top, #f46b45, #eea849);
 }
 
-.right-banner a:visited {
-	color:white;
+.right-banner a {
+	color:black;
 }
 
 .right-banner a:hover {
 	color:red;
+}
+
+.support-banner a {
+	color: black;
+}
+
+.support-banner a:hover {
+	color: green;
+}
+
+#email {
+	color: white;
+	text-align: center;
 }
 
 .socials {
