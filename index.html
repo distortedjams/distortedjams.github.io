@@ -1,30 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158897696-1"></script>
-	
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
 
-  gtag('config', 'UA-158897696-1');
+  	gtag('config', 'UA-158897696-1');
 </script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="bin/mystyle2.css"/>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-<title>DistortedJams</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="bin/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fluid Navbar</title>
 </head>
 <body>
-<div class="cursor"></div>
+    <header>
+        <nav>
+            <div class="menu-icon">
+                <i class="fa fa-bars fa-2x"></i>
+            </div>
+            <div class="logo">
+                Distortedjams
+            </div>
 
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#socials">Socials</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>    
+        </nav>
+    </header>
 
-<div class ="main" id="element" style="background-image: url(images/blankblackparade.jpg); background-size: 100% 100%;">
-	<p class="noselect" id="distance" style="font-size: 10vw; margin:auto; font-family: 'Aggressive Angry Baby Killer'">Distortedjams</p>
-</div>
-	
-<script src="bin/app.js"></script>
+    <main>
+        <section data-index="0" class="home" id="home">
+            <h2>Home</h2>
+        </section> <!--Home-->
+        <section class="socials" id="socials">
+            <h2>Socials</h2>
+        </section> <!--Projects-->
+        <section class="support" id="support">
+            <h2>Support</h2>
+        </section> <!--Contact-->
+        <section class="contact" id="contact">
+            <h2>Contact</h2>
+        </section> <!--Contact-->
+        
+    </main>
+
+    <script type="text/javascript">
+      // Menu-toggle button
+
+      $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+      });
+
+    </script>
 </body>
-	
 </html>

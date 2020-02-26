@@ -1,103 +1,134 @@
 * {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial;
-  padding: 10px;
-  background: #f1f1f1;
-}
-
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: white;
-}
-
-.header h1 {
-  font-size: 50px;
-}
-
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  text-align: center;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: center;
-  display: inline-block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
+    margin: 0;
     padding: 0;
-  }
+    /*box-sizing: border-box;*/
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
+html, body {
+    margin: 0;
+    padding: 0;
     width: 100%;
-  }
+    font-family: sans-serif;
+}
+
+
+
+.logo {
+    position: fixed;
+    float: left;
+    margin: 16px 36px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+}
+
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    background: rgba(0,0,0,0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: #000;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.menu-icon {
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+@media(max-width: 580px) {
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+
+    nav ul {
+        max-height: 0px;
+        background: #000;
+    }
+
+    nav.black ul {
+        background: #000;
+    }
+
+    .showing {
+        max-height: 20em;
+    }
+
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px 0;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+
+section h2 {
+    font-size: 5rem;
+    color: white;
+}
+
+.home {
+    background: linear-gradient(to right top, #f46b45, #eea849);
+}
+
+.socials {
+    background: linear-gradient(to right top, #005c97, #363795);
+}
+
+.support {
+    background: linear-gradient(to right top, #e53935, #e35d5b);
+}
+
+.contact {
+    background: linear-gradient(to right top, #f46b45, #eea849);
+}
+
+
+@font-face {
+	font-family: "Aggressive Angry Baby Killer";
+	src: url("baby.TTF")
 }

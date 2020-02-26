@@ -1,5 +1,6 @@
 // JavaScript Document
 let mouseCursor = document.querySelector(".cursor");
+let mainDiv = document.querySelector(".main");
 let navLinks = document.querySelectorAll(".nav-links li");
 
 window.addEventListener('mousemove',cursor);
@@ -11,20 +12,19 @@ function cursor(e)
 	mouseCursor.style.top = e.pageY + "px";
 	mouseCursor.style.left = e.pageX + "px";
 	
-	var mX, mY, distance,
-        $distance = $('#distance span'),
-        $element  = $('#element');
+	var box=mainDiv;
+	var boxCenter=[$(".main").offset().left+$(".main").width()/2, $(".main").offset().top+$(".main").height()/2];
 
-    function calculateDistance(elem, mouseX, mouseY) {
-        return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
-    }
-
-    $(document).mousemove(function(e) {  
-        mX = e.pageX;
-        mY = e.pageY;
-        distance = calculateDistance($element, mX, mY);
-        $distance.text(distance);         
-    });
+$(document).mousemove(function(e){    
+    
+        
+	var angle = Math.atan2(e.pageX- boxCenter[0],- (e.pageY- boxCenter[1]) )*(180/Math.PI);	    
+    
+    box.css({ "-webkit-transform": 'rotate(' + angle + 'deg)'});    
+    box.css({ '-moz-transform': 'rotate(' + angle + 'deg)'});
+    box.css({ 'transform': 'rotate(' + angle + 'deg)'});
+    
+});
 }
 
 function cursordown()
