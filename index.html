@@ -17,6 +17,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/758bee4c6f.js" crossorigin="anonymous"></script>
     <title>Distortedjams</title>
+	<meta name="description" content="DistortedJams' personal website for links and contact information."></head>
 </head>
 <body>
     <header>
@@ -56,7 +57,7 @@
 			</div>
         </section> <!--Home-->
         <section class="socials" id="socials">
-            <h2>Socials</h2>
+            <h2 id="sheader">Socials</h2>
 			<div class="right-banner">
 				<br>
 				<a href="reddit.html"><i class="fab fa-reddit fa-3x"></i></a>
@@ -89,12 +90,14 @@
 
     <script type="text/javascript">
       // Menu-toggle button
+		
+		$("#sheader").animate({ height: '681px', width: '467px' }, 1000, 'linear');
 
       $(document).ready(function() {
             $(".menu-icon").on("click", function() {
                   $("nav ul").toggleClass("showing");
             });
-      });
+		  });
 
       // Scrolling Effect
 
@@ -106,7 +109,7 @@
             else {
                   $('nav').removeClass('black');
             }
-      });
+	  });
 
     </script>
 </body>
